@@ -21,7 +21,7 @@ SELECT CASE WHEN HOUR(created) IN(0, 1, 2, 3, 4, 5, 6, 23) THEN '3'
 FROM   logs_data
 WHERE  rec_type = 'Auto Mode Gages'
 AND    date_1 IS NOT NULL
-AND    created >= '2022-08-20 23:00' -- 11:00 PM
-AND    created <= '2022-08-21 22:59' -- 10:59 PM 
+AND    created >= '2022-08-23 23:00' -- 11:00 PM
+AND    created <= '2022-08-24 22:59' -- 10:59 PM 
 GROUP BY  val_1, Shift
 ORDER  BY val_1, created;
